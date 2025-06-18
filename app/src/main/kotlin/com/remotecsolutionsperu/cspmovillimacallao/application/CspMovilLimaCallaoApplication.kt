@@ -1,0 +1,13 @@
+package com.remotecsolutionsperu.cspmovillimacallao.application
+
+import android.app.Application
+import com.google.firebase.FirebaseApp
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class CspMovilLimaCallaoApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        FirebaseApp.initializeApp(this)
+    }
+}

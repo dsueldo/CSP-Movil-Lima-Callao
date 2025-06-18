@@ -1,4 +1,4 @@
-package com.remotecsolutionsperu.cspmovillimacallao
+package com.remotecsolutionsperu.cspmovillimacallao.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
