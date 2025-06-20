@@ -20,7 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 # Keep application classes
--keep class com.remotecsolutionsperu.cspmovil.** { *; }
+-keep class com.remotecsolutionsperu.cspmovillimacallao.** { *; }
 
 # Keep ViewModel classes
 -keep class androidx.lifecycle.ViewModel { *; }
@@ -37,7 +37,7 @@
 -keepattributes Signature
 
 # Keep Retrofit and Gson models
--keep class com.remotecsolutionsperu.cspmovil.models.** { *; }
+-keep class com.remotecsolutionsperu.cspmovillimacallao.models.** { *; }
 -keepattributes *Annotation*
 
 # Keep logging (optional)
