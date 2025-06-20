@@ -96,6 +96,10 @@ dependencies {
     implementation("io.coil-kt.coil3:coil-compose:3.0.4")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.4")
 
+    implementation(platform("com.google.firebase:firebase-bom:32.x.x")) // Asegúrate de usar la última versión del BoM
+    implementation("com.google.firebase:firebase-appcheck")
+    implementation("com.google.firebase:firebase-appcheck-playintegrity") // Para Play Integrity API
+
     implementation(libs.androidx.security.crypto.ktx.v110alpha06)
     implementation(project(":presentation"))
     implementation(project(":domain"))
