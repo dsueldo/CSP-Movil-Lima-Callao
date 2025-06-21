@@ -11,9 +11,22 @@ plugins {
     id("com.google.dagger.hilt.android")
 }
 
+val keystoreProperties = Properties().apply {
+    load(FileInputStream(rootProject.file("keystore.properties")))
+}
+
 android {
     namespace = "com.remotecsolutionsperu.cspmovillimacallao"
     compileSdk = 35
+
+    signingConfigs {
+        create("release") {
+            storeFile = file(keystoreProperties["storeFile"] as String)
+            storePassword = keystoreProperties["storePassword"] as String
+            keyAlias = keystoreProperties["keyAlias"] as String
+            keyPassword = keystoreProperties["keyPassword"] as String
+        }
+    }
 
     defaultConfig {
         applicationId = "com.remotecsolutionsperu.cspmovillimacallao"
@@ -27,7 +40,7 @@ android {
 
     buildTypes {
         release {
-//            signingConfig = signingConfigs.getByName("release")
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
