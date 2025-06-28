@@ -34,7 +34,6 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -50,10 +49,12 @@ android {
         }
         debug {
             signingConfig = signingConfigs.getByName("debug")
-            applicationIdSuffix = ""
+            applicationIdSuffix = ".debug"
             versionNameSuffix = "-debug"
+            isDebuggable = true
             isMinifyEnabled = false
             isShrinkResources = false
+            resValue("string", "app_name", "CSP Movil Lima Callao (Debug)")
         }
     }
     compileOptions {
